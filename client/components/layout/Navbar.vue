@@ -1,15 +1,15 @@
 <template>
-  <section class="hero is-bold app-navbar animated" :class="{ slideInDown: show, slideOutDown: !show }">
+  <section class="hero is-bold app-navbar animated is-white" :class="{ slideInDown: show, slideOutDown: !show }">
     <div class="hero-head">
-      <nav class="nav">
-        <div class="nav-left">
-          <a class="nav-item is-hidden-tablet" @click="toggleSidebar({opened: !sidebar.opened})">
+      <nav class="navbar">
+        <div class="navbar-start">
+          <a class="navbar-item is-hidden-tablet" @click="toggleSidebar({opened: !sidebar.opened})">
             <i class="fa fa-bars" aria-hidden="true" v-show="!sidebar.hidden"></i>
           </a>
         </div>
-        <div class="nav-center">
-          <a class="nav-item hero-brand" href="/">
-            <img src="~assets/logo.svg" :alt="pkginfo.description">
+        <div class="navbar-center">
+          <a class="navbar-item hero-brand" href="/">
+            <img src="~assets/logo.svg" width="10" height="10" :alt="pkginfo.description">
             <tooltip :label="'v' + pkginfo.version" placement="right" type="success" size="small" :no-animate="true" :always="true" :rounded="true">
               <div class="is-hidden-mobile">
                 <span class="vue">Vue</span><strong class="admin">Admin</strong>
@@ -17,9 +17,9 @@
             </tooltip>
           </a>
         </div>
-        <div class="nav-right is-flex">
-          <router-link v-if="!$auth.check()" to="/login" class="nav-item">Login</router-link>
-          <a v-if="$auth.check()" @click="logout" class="nav-item">Logout</a>
+        <div class="navbar-end is-flex">
+          <router-link v-if="!$auth.check()" to="/login" class="navbar-item">Login</router-link>
+          <a v-if="$auth.check()" @click="logout" class="navbar-item">Logout</a>
         </div>
       </nav>
     </div>
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma/sass/utilities/variables';
+@import '~bulma/sass/utilities/initial-variables';
 
 .app-navbar {
   position: fixed;
