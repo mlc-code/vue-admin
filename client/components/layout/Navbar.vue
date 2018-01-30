@@ -87,6 +87,14 @@ export default {
   }
 }
 
+.navbar-item, .navbar-link {
+	color: #4a4a4a;
+	display: block;
+	line-height: 1.5;
+	padding: 1.0rem 1.0rem;
+	position: relative;
+}
+
 .hero-brand {
   .vue {
     margin-left: 10px;

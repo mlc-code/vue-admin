@@ -38,6 +38,8 @@
     "animejs": "^2.0.1",
     "axios": "^0.17.1",
     "bulma": "^0.6.2",
+    "bulma-accordion": "^0.2.4",
+    "bulma-extensions": "^0.7.3",
     "eslint-plugin-import": "^2.8.0",
     "font-awesome": "4.7.0",
     "mdi": "^2.1.19",
